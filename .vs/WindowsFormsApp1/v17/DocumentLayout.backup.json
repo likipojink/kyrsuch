@@ -1,0 +1,752 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\users\\dima\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\windowsformsapp1\\windowsformsapp1\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\productseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formchangeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formchangeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formchangeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formchangeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\resources\\logo.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\resources\\logo.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainformsalesman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainformsalesman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainformsalesman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainformsalesman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainformdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainformdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainformdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainformdirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordersseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordersseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordersseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordersseller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\form\u0441ategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form\u0441ategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formdirectorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formdirectorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formorderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\form\u0441ategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form\u0441ategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formdirectorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formdirectorymenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formchangeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formchangeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordercreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formchangeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formchangeuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formadduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordersseller.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordersseller.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\windowsformsapp1\\formordercreation.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA53EAE-B8DB-40DA-A881-AA87AF602193}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\formordercreation.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormChangeProduct.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeProduct.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormChangeProduct.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeProduct.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormChangeProduct.cs",
+              "ViewState": "AgIAAH0BAAAAAAAAAAAowJYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:32:11.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormAddProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddProduct.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAddProduct.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAddProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:13:41.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormAddProduct.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddProduct.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAddProduct.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddProduct.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAddProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:31:58.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Product.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Product.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:03:37.761Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Product.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Product.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Product.cs",
+              "ViewState": "AgIAAN4BAAAAAAAAAAAgwAYCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:06:49.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductSeller.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\ProductSeller.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductSeller.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\ProductSeller.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductSeller.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:05:03.902Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductSeller.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\ProductSeller.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\ProductSeller.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\ProductSeller.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\ProductSeller.cs",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAowG0BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:08:26.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormChangeProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeProduct.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormChangeProduct.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormChangeProduct.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:13:39.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\BaseForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\BaseForm.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\BaseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\BaseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T21:09:13.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\App.config",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\App.config",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\App.config",
+              "RelativeToolTip": "WindowsFormsApp1\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-19T15:38:41.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainFormDirector.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormDirector.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainFormDirector.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormDirector.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\MainFormDirector.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:45:16.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\MainForm.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vysAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T18:16:33.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAcwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:31:59.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "logo.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, BMP]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo.ico",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Resources\\logo.ico",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Resources\\logo.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, BMP]",
+              "RelativeToolTip": "WindowsFormsApp1\\Resources\\logo.ico - Icon [256x256, 32-\u0440\u0430\u0437\u0440\u044F\u0434\u043D\u043E\u0435, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2026-03-11T22:07:45.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainFormSalesman.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormSalesman.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainFormSalesman.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormSalesman.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\MainFormSalesman.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:03:31.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainFormSalesman.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormSalesman.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainFormSalesman.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormSalesman.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\MainFormSalesman.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAArwDAAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:07:40.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:45:30.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainForm.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:45:16.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainFormDirector.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormDirector.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\MainFormDirector.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\MainFormDirector.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\MainFormDirector.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAArwCkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T22:00:00.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseForm.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\BaseForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\BaseForm.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\BaseForm.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\BaseForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T21:02:40.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormSettings.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormSettings.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormSettings.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormSettings.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormSettings.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAArwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T17:59:24.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormSettings.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormSettings.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormSettings.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T17:55:58.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormOrdersSeller.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrdersSeller.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrdersSeller.cs",
+              "ViewState": "AgIAAGsBAAAAAAAAAAArwIcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:14:17.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormOrdersSeller.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrdersSeller.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrdersSeller.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:11:47.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormOrderStatus.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderStatus.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrderStatus.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderStatus.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrderStatus.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:02:56.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DatabaseConfig.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\DatabaseConfig.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\DatabaseConfig.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\DatabaseConfig.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\DatabaseConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T18:05:38.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FormDirectoryMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormDirectoryMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormDirectoryMenu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:13:25.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Form\u0421ategories.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form\u0421ategories.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form\u0421ategories.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form\u0421ategories.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form\u0421ategories.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:45:35.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T18:09:17.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FormOrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderStatus.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrderStatus.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderStatus.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrderStatus.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAuwKYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:31:52.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FormUsers.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormUsers.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormUsers.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormUsers.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormUsers.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAwA8AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T18:16:23.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Form\u0421ategories.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form\u0421ategories.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form\u0421ategories.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\Form\u0421ategories.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form\u0421ategories.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAUwI8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:31:57.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FormUsers.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormUsers.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormUsers.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormUsers.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormUsers.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:03:36.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FormRole.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormRole.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormRole.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormRole.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormRole.cs",
+              "ViewState": "AgIAAOsBAAAAAAAAAADwvwICAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:14:59.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "FormRole.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormRole.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormRole.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormRole.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormRole.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T20:14:56.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "FormDirectoryMenu.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormDirectoryMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T18:15:24.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FormOrderCreation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrderCreation.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrderCreation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:55:02.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FormChangeUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormChangeUser.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormChangeUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:13:38.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "FormOrderCreation.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrderCreation.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrderCreation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:31:21.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "FormOrders.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrders.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrders.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrders.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrders.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:36:05.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "FormAddUser.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAddUser.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddUser.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:32:08.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FormChangeUser.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormChangeUser.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormChangeUser.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormChangeUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T15:32:10.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "FormOrders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrders.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrders.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:45:22.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FormAddUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddUser.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormAddUser.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormAddUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp1\\FormAddUser.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:13:40.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "FormOrdersSeller.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrdersSeller.Designer.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrdersSeller.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrdersSeller.Designer.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAIAwwI8AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T18:33:59.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "FormOrderCreation.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\FormOrderCreation.Designer.cs",
+              "ToolTip": "C:\\Users\\DIMA\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\4 \u043A\u0443\u0440\u043E\u0441\u0432\u0430\u044F\\\u043A\u0440\u044F\u0436\u0435\u0432\\3\\2\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\WindowsFormsApp1\\WindowsFormsApp1\\FormOrderCreation.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\FormOrderCreation.Designer.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAIAwwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T17:58:30.274Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
