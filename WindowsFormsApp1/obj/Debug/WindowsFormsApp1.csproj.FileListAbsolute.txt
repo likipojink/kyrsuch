@@ -1,0 +1,75 @@
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.ResolveComReference.cache
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDirectoryMenu.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.A.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAddProduct.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAddUser.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormChangeProduct.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormChangeUser.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\FlowerShopApp.FormOrderCreation.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrders.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormUsers.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormСategories.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainFormDirector.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainFormSalesman.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Product.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.xml
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrdersSeller.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSettings.resources
+C:\Users\DIMA\Desktop\курсовая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductSeller.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Interop.Microsoft.Office.Core.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Interop.VBIDE.dll
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.ResolveComReference.cache
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormDirectoryMenu.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.A.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAddProduct.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAddUser.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormChangeProduct.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormChangeUser.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\FlowerShopApp.FormOrderCreation.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrders.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrdersSeller.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormSettings.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormUsers.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormСategories.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainForm.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainFormDirector.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainFormSalesman.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Product.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ProductSeller.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Кряжев\14 курсовая\14 курсовая\4 куросвая\4 куросвая\кряжев\3\2\курсовая\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
