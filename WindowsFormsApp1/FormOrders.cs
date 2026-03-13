@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     {
         private string connectionString = DatabaseConfig.ConnectionString;
         private DataTable ordersTable;
+        private bool showFullPhoneNumbers = false; // Поле для отслеживания состояния отображения номеров
 
         public FormOrders()
         {
@@ -24,6 +25,53 @@ namespace WindowsFormsApp1
             LoadStatuses();
             LoadOrders();
             InitializeDataGridView();
+
+            // Подписываемся на событие форматирования ячеек
+            dataGridView1.CellFormatting += DataGridView1_CellFormatting;
+        }
+
+        // ========== МАСКИРОВАНИЕ НОМЕРА ТЕЛЕФОНА ==========
+        private string MaskPhoneNumber(string phone)
+        {
+            if (string.IsNullOrEmpty(phone) || phone.Length < 4)
+                return phone;
+
+            // Оставляем последние 4 цифры, остальные заменяем звездочками
+            string lastFour = phone.Substring(Math.Max(0, phone.Length - 4));
+            string mask = new string('*', Math.Max(0, phone.Length - 4));
+
+            return mask + lastFour;
+        }
+
+        // ========== ОБРАБОТЧИК ФОРМАТИРОВАНИЯ ЯЧЕЕК ==========
+        private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Проверяем, что это колонка "Телефон" и значение не null
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Телефон" && e.Value != null && e.Value != DBNull.Value)
+            {
+                string phone = e.Value.ToString();
+
+                // Если не показываем полные номера - маскируем
+                if (!showFullPhoneNumbers)
+                {
+                    e.Value = MaskPhoneNumber(phone);
+                    e.FormattingApplied = true;
+                }
+                // Если показываем полные номера - оставляем как есть
+            }
+        }
+
+        // ========== КНОПКА ПОКАЗА/СКРЫТИЯ НОМЕРОВ ==========
+        private void btnShowPhone_Click(object sender, EventArgs e)
+        {
+            // Меняем состояние
+            showFullPhoneNumbers = !showFullPhoneNumbers;
+
+            // Меняем текст кнопки
+            btnShowPhone.Text = showFullPhoneNumbers ? "Скрыть номера" : "Показать номера";
+
+            // Принудительно перерисовываем DataGridView, чтобы применить маскировку/показ
+            dataGridView1.Refresh();
         }
 
         private void LoadStatuses()
@@ -62,12 +110,11 @@ namespace WindowsFormsApp1
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    // ДОБАВЛЯЕМ items_json В ЗАПРОС
                     string sql = @"SELECT 
                                 o.id AS 'ID',
                                 o.client_id AS 'ID клиента',
                                 c.name AS 'Клиент',
-                                c.phone AS 'Телефон',
+                                c.phone AS 'Телефон',  
                                 o.status_id AS 'ID статуса',
                                 s.name AS 'Статус',
                                 o.user_id AS 'ID пользователя',
@@ -76,7 +123,7 @@ namespace WindowsFormsApp1
                                 DATE_FORMAT(o.completion_date, '%d.%m.%Y') AS 'Дата выполнения',
                                 o.total_amount AS 'Сумма',
                                 o.total_amount AS total_amount_numeric,
-                                o.items_json AS 'СоставJSON',  -- ДОБАВЛЯЕМ JSON
+                                o.items_json AS 'СоставJSON',
                                 o.client_id,
                                 o.status_id,
                                 o.user_id
@@ -92,7 +139,7 @@ namespace WindowsFormsApp1
 
                     dataGridView1.DataSource = ordersTable;
 
-                    // Скрываем технические поля
+                    // Скрываем технические поля, но НЕ скрываем "Телефон"
                     string[] hiddenColumns = { "ID", "client_id", "status_id", "user_id",
                                                "total_amount_numeric", "ID клиента",
                                                "ID статуса", "ID пользователя", "СоставJSON" };
@@ -103,14 +150,21 @@ namespace WindowsFormsApp1
                             dataGridView1.Columns[columnName].Visible = false;
                     }
 
-                    // ДОБАВЛЯЕМ КОЛОНКУ ДЛЯ СОСТАВА
-                    AddCompositionColumn();
+                    // Убеждаемся, что колонка "Телефон" видима
+                    if (dataGridView1.Columns.Contains("Телефон"))
+                    {
+                        dataGridView1.Columns["Телефон"].Visible = true;
+                        dataGridView1.Columns["Телефон"].HeaderText = "Телефон";
+                        dataGridView1.Columns["Телефон"].Width = 100;
+                    }
 
+                    AddCompositionColumn();
                     ConfigureColumnWidths();
                     ConfigureGridViewAppearance();
-
-                    // ЗАПОЛНЯЕМ СОСТАВ
                     FillCompositionColumn();
+
+                    // Принудительно обновляем отображение ячеек
+                    dataGridView1.Refresh();
                 }
             }
             catch (Exception ex)
@@ -120,7 +174,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ДОБАВЛЕНИЕ КОЛОНКИ СОСТАВА ==========
+        // ========== ДОБАВЛЕНИЕ КОЛОНКИ СОСТАВА ==========
         private void AddCompositionColumn()
         {
             if (!dataGridView1.Columns.Contains("Состав"))
@@ -135,7 +189,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ЗАПОЛНЕНИЕ СОСТАВА ==========
+        // ========== ЗАПОЛНЕНИЕ СОСТАВА ==========
         private void FillCompositionColumn()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -162,7 +216,7 @@ namespace WindowsFormsApp1
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
-        // ========== НОВЫЙ МЕТОД: ФОРМАТИРОВАНИЕ JSON В ТЕКСТ ==========
+        // ========== ФОРМАТИРОВАНИЕ JSON В ТЕКСТ ==========
         private string FormatCompositionFromJson(string json)
         {
             try
@@ -180,7 +234,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ПОЛУЧЕНИЕ СОСТАВА ИЗ order_items ==========
+        // ========== ПОЛУЧЕНИЕ СОСТАВА ИЗ order_items ==========
         private string GetCompositionFromOrderItems(int orderId)
         {
             try
@@ -324,7 +378,7 @@ namespace WindowsFormsApp1
                     string sql = @"SELECT 
                                 o.id,
                                 c.name AS 'Клиент',
-                                c.phone AS 'Телефон',
+                                c.phone AS 'Телефон',  
                                 s.name AS 'Статус',
                                 u.full_name AS 'Пользователь',
                                 DATE_FORMAT(o.order_date, '%d.%m.%Y %H:%i') AS 'Дата заказа',
@@ -373,7 +427,7 @@ namespace WindowsFormsApp1
                 worksheet.Name = "Отчет по продажам";
 
                 // ЗАГОЛОВОК
-                Microsoft.Office.Interop.Excel.Range titleRange = worksheet.Range["A1", "I1"]; // Увеличили до I
+                Microsoft.Office.Interop.Excel.Range titleRange = worksheet.Range["A1", "I1"];
                 titleRange.Merge();
                 titleRange.Value = $"ОТЧЕТ ПО ПРОДАЖАМ ЦВЕТОЧНОГО МАГАЗИНА";
                 titleRange.Font.Bold = true;
@@ -409,7 +463,7 @@ namespace WindowsFormsApp1
                 worksheet.Cells[7, 2] = totalSum / reportData.Rows.Count;
                 worksheet.Range["B7"].NumberFormat = "#,##0.00 ₽";
 
-                // ЗАГОЛОВКИ ТАБЛИЦЫ (ДОБАВИЛИ КОЛОНКУ СОСТАВ)
+                // ЗАГОЛОВКИ ТАБЛИЦЫ
                 string[] headers = { "№", "Клиент", "Телефон", "Статус", "Менеджер", "Дата заказа", "Дата выполнения", "Сумма, ₽", "Состав заказа" };
                 for (int i = 0; i < headers.Length; i++)
                 {
@@ -427,7 +481,7 @@ namespace WindowsFormsApp1
                 {
                     worksheet.Cells[rowIndex, 1] = rowIndex - 9;
                     worksheet.Cells[rowIndex, 2] = row["Клиент"].ToString();
-                    worksheet.Cells[rowIndex, 3] = row["Телефон"].ToString();
+                    worksheet.Cells[rowIndex, 3] = row["Телефон"].ToString(); // Полный номер для отчета
                     worksheet.Cells[rowIndex, 4] = row["Статус"].ToString();
                     worksheet.Cells[rowIndex, 5] = row["Пользователь"].ToString();
                     worksheet.Cells[rowIndex, 6] = row["Дата заказа"].ToString();
@@ -435,10 +489,9 @@ namespace WindowsFormsApp1
 
                     Microsoft.Office.Interop.Excel.Range sumCell = worksheet.Cells[rowIndex, 8];
                     sumCell.Value = Convert.ToDecimal(row["Сумма"]);
-
                     sumCell.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignRight;
 
-                    // СОСТАВ - форматируем для читаемости
+                    // СОСТАВ
                     if (row["Состав"] != DBNull.Value)
                     {
                         string json = row["Состав"].ToString();
@@ -465,7 +518,6 @@ namespace WindowsFormsApp1
 
                 // ИТОГОВАЯ СТРОКА
                 worksheet.Cells[rowIndex, 8] = totalSum;
-
                 worksheet.Range[worksheet.Cells[rowIndex, 8], worksheet.Cells[rowIndex, 8]].Font.Bold = true;
                 worksheet.Range[worksheet.Cells[rowIndex, 8], worksheet.Cells[rowIndex, 8]].Interior.Color = Color.LightYellow;
 
@@ -486,7 +538,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== ОСТАЛЬНЫЕ МЕТОДЫ ==========
+        // ========== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ==========
         private int GetSelectedOrderId()
         {
             if (dataGridView1.SelectedRows.Count == 0) return 0;
