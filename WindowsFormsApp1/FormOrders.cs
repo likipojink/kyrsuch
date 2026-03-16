@@ -13,64 +13,72 @@ namespace WindowsFormsApp1
     {
         private string connectionString = DatabaseConfig.ConnectionString;
         private DataTable ordersTable;
-        private bool showFullPhoneNumbers = false; // Поле для отслеживания состояния отображения номеров
+        private bool showFullPhoneNumbers = false;
 
         public FormOrders()
         {
             InitializeComponent();
+
+            // Подписываемся на события
+            cmbPriceSort.SelectedIndexChanged += cmbPriceSort_SelectedIndexChanged;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+            cmbStatus.SelectedIndexChanged += cmbStatus_SelectedIndexChanged;
         }
 
         private void FormOrders_Load(object sender, EventArgs e)
         {
             LoadStatuses();
+            LoadPriceSortOptions();
             LoadOrders();
             InitializeDataGridView();
-
-            // Подписываемся на событие форматирования ячеек
             dataGridView1.CellFormatting += DataGridView1_CellFormatting;
+
+            // Запрещаем сортировку по клику на заголовки колонок
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
-        // ========== МАСКИРОВАНИЕ НОМЕРА ТЕЛЕФОНА ==========
+        // ========== ЗАГРУЗКА ВАРИАНТОВ СОРТИРОВКИ ==========
+        private void LoadPriceSortOptions()
+        {
+            cmbPriceSort.DropDownStyle = ComboBoxStyle.DropDownList; // Запрещаем ввод текста
+            cmbPriceSort.Items.Clear();
+            cmbPriceSort.Items.Add("Без сортировки");
+            cmbPriceSort.Items.Add("Сначала дешевые");
+            cmbPriceSort.Items.Add("Сначала дорогие");
+            cmbPriceSort.SelectedIndex = 0;
+        }
+
+        // ========== МАСКИРОВАНИЕ НОМЕРА ==========
         private string MaskPhoneNumber(string phone)
         {
             if (string.IsNullOrEmpty(phone) || phone.Length < 4)
                 return phone;
 
-            // Оставляем последние 4 цифры, остальные заменяем звездочками
             string lastFour = phone.Substring(Math.Max(0, phone.Length - 4));
             string mask = new string('*', Math.Max(0, phone.Length - 4));
-
             return mask + lastFour;
         }
 
-        // ========== ОБРАБОТЧИК ФОРМАТИРОВАНИЯ ЯЧЕЕК ==========
         private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // Проверяем, что это колонка "Телефон" и значение не null
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Телефон" && e.Value != null && e.Value != DBNull.Value)
             {
                 string phone = e.Value.ToString();
-
-                // Если не показываем полные номера - маскируем
                 if (!showFullPhoneNumbers)
                 {
                     e.Value = MaskPhoneNumber(phone);
                     e.FormattingApplied = true;
                 }
-                // Если показываем полные номера - оставляем как есть
             }
         }
 
-        // ========== КНОПКА ПОКАЗА/СКРЫТИЯ НОМЕРОВ ==========
         private void btnShowPhone_Click(object sender, EventArgs e)
         {
-            // Меняем состояние
             showFullPhoneNumbers = !showFullPhoneNumbers;
-
-            // Меняем текст кнопки
             btnShowPhone.Text = showFullPhoneNumbers ? "Скрыть номера" : "Показать номера";
-
-            // Принудительно перерисовываем DataGridView, чтобы применить маскировку/показ
             dataGridView1.Refresh();
         }
 
@@ -91,6 +99,7 @@ namespace WindowsFormsApp1
                     allStatusesRow["name"] = "Все статусы";
                     dt.Rows.InsertAt(allStatusesRow, 0);
 
+                    cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList; // Запрещаем ввод текста
                     cmbStatus.DataSource = dt;
                     cmbStatus.DisplayMember = "name";
                     cmbStatus.ValueMember = "id";
@@ -122,11 +131,12 @@ namespace WindowsFormsApp1
                                 DATE_FORMAT(o.order_date, '%d.%m.%Y %H:%i') AS 'Дата заказа',
                                 DATE_FORMAT(o.completion_date, '%d.%m.%Y') AS 'Дата выполнения',
                                 o.total_amount AS 'Сумма',
-                                o.total_amount AS total_amount_numeric,
+                                o.total_amount AS 'Сумма_число',
                                 o.items_json AS 'СоставJSON',
                                 o.client_id,
                                 o.status_id,
-                                o.user_id
+                                o.user_id,
+                                o.order_date AS 'Дата_заказа_сортировка'
                          FROM orders o
                          LEFT JOIN clients c ON o.client_id = c.id
                          LEFT JOIN order_statuses s ON o.status_id = s.id
@@ -139,10 +149,10 @@ namespace WindowsFormsApp1
 
                     dataGridView1.DataSource = ordersTable;
 
-                    // Скрываем технические поля, но НЕ скрываем "Телефон"
                     string[] hiddenColumns = { "ID", "client_id", "status_id", "user_id",
-                                               "total_amount_numeric", "ID клиента",
-                                               "ID статуса", "ID пользователя", "СоставJSON" };
+                                               "ID клиента", "ID статуса",
+                                               "ID пользователя", "СоставJSON",
+                                               "Сумма_число", "Дата_заказа_сортировка" };
 
                     foreach (string columnName in hiddenColumns)
                     {
@@ -150,7 +160,6 @@ namespace WindowsFormsApp1
                             dataGridView1.Columns[columnName].Visible = false;
                     }
 
-                    // Убеждаемся, что колонка "Телефон" видима
                     if (dataGridView1.Columns.Contains("Телефон"))
                     {
                         dataGridView1.Columns["Телефон"].Visible = true;
@@ -162,8 +171,6 @@ namespace WindowsFormsApp1
                     ConfigureColumnWidths();
                     ConfigureGridViewAppearance();
                     FillCompositionColumn();
-
-                    // Принудительно обновляем отображение ячеек
                     dataGridView1.Refresh();
                 }
             }
@@ -185,11 +192,11 @@ namespace WindowsFormsApp1
                 compColumn.Width = 250;
                 compColumn.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 compColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+                compColumn.SortMode = DataGridViewColumnSortMode.NotSortable; // Запрещаем сортировку
                 dataGridView1.Columns.Add(compColumn);
             }
         }
 
-        // ========== ЗАПОЛНЕНИЕ СОСТАВА ==========
         private void FillCompositionColumn()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -205,18 +212,15 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    // Если JSON нет, пробуем получить из order_items
                     int orderId = Convert.ToInt32(row.Cells["ID"].Value);
                     string composition = GetCompositionFromOrderItems(orderId);
                     row.Cells["Состав"].Value = composition;
                 }
             }
 
-            // Автоматически подгоняем высоту строк под содержимое
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
-        // ========== ФОРМАТИРОВАНИЕ JSON В ТЕКСТ ==========
         private string FormatCompositionFromJson(string json)
         {
             try
@@ -230,11 +234,10 @@ namespace WindowsFormsApp1
             }
             catch
             {
-                return json; // Если не удалось распарсить, показываем как есть
+                return json;
             }
         }
 
-        // ========== ПОЛУЧЕНИЕ СОСТАВА ИЗ order_items ==========
         private string GetCompositionFromOrderItems(int orderId)
         {
             try
@@ -271,7 +274,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== КЛАСС ДЛЯ ДЕСЕРИАЛИЗАЦИИ JSON ==========
         public class OrderItem
         {
             public int ProductId { get; set; }
@@ -331,40 +333,59 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = false;
         }
 
-        // ========== ФИЛЬТРАЦИЯ ==========
+        // ========== ФИЛЬТРАЦИЯ И СОРТИРОВКА ==========
         private void ApplyFilters()
         {
             if (ordersTable == null) return;
 
-            string filter = "";
-
-            if (!string.IsNullOrWhiteSpace(txtSearch.Text))
-                filter += $"[Клиент] LIKE '%{txtSearch.Text}%'";
-
-            if (cmbStatus.SelectedIndex > 0)
+            try
             {
-                if (!string.IsNullOrEmpty(filter)) filter += " AND ";
-                filter += $"[Статус] = '{cmbStatus.Text}'";
-            }
+                DataView dv = ordersTable.DefaultView;
+                string filter = "";
 
-            if (!string.IsNullOrWhiteSpace(txtPriceFilter.Text))
+                if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+                    filter += $"[Клиент] LIKE '%{txtSearch.Text}%'";
+
+                if (cmbStatus.SelectedIndex > 0)
+                {
+                    if (!string.IsNullOrEmpty(filter)) filter += " AND ";
+                    filter += $"[Статус] = '{cmbStatus.Text}'";
+                }
+
+                dv.RowFilter = filter;
+
+                // Сортировка по выбранному пункту
+                if (cmbPriceSort.SelectedIndex == 1) // Сначала дешевые
+                {
+                    if (ordersTable.Columns.Contains("Сумма_число"))
+                        dv.Sort = "[Сумма_число] ASC";
+                }
+                else if (cmbPriceSort.SelectedIndex == 2) // Сначала дорогие
+                {
+                    if (ordersTable.Columns.Contains("Сумма_число"))
+                        dv.Sort = "[Сумма_число] DESC";
+                }
+                else // Без сортировки (по дате)
+                {
+                    if (ordersTable.Columns.Contains("Дата_заказа_сортировка"))
+                        dv.Sort = "[Дата_заказа_сортировка] DESC";
+                }
+
+                dataGridView1.DataSource = dv;
+                FillCompositionColumn();
+            }
+            catch (Exception ex)
             {
-                if (!string.IsNullOrEmpty(filter)) filter += " AND ";
-                if (decimal.TryParse(txtPriceFilter.Text, out decimal amount))
-                    filter += $"[total_amount_numeric] >= {amount}";
+                // В случае ошибки показываем данные без сортировки
+                dataGridView1.DataSource = ordersTable;
+                FillCompositionColumn();
             }
-
-            ordersTable.DefaultView.RowFilter = filter;
-
-            // После фильтрации нужно перезаполнить состав
-            FillCompositionColumn();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e) => ApplyFilters();
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e) => ApplyFilters();
-        private void txtPriceFilter_TextChanged(object sender, EventArgs e) => ApplyFilters();
+        private void cmbPriceSort_SelectedIndexChanged(object sender, EventArgs e) => ApplyFilters();
 
-        // ========== МЕТОД ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ ОТЧЕТА ==========
         private DataTable GetReportData()
         {
             DataTable reportTable = new DataTable();
@@ -404,7 +425,6 @@ namespace WindowsFormsApp1
             return reportTable;
         }
 
-        // ========== ОТЧЕТ В EXCEL ==========
         private void btnReport_Click(object sender, EventArgs e)
         {
             try
@@ -426,7 +446,6 @@ namespace WindowsFormsApp1
                 Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.ActiveSheet;
                 worksheet.Name = "Отчет по продажам";
 
-                // ЗАГОЛОВОК
                 Microsoft.Office.Interop.Excel.Range titleRange = worksheet.Range["A1", "I1"];
                 titleRange.Merge();
                 titleRange.Value = $"ОТЧЕТ ПО ПРОДАЖАМ ЦВЕТОЧНОГО МАГАЗИНА";
@@ -436,12 +455,10 @@ namespace WindowsFormsApp1
                 titleRange.Interior.Color = Color.LightBlue;
                 titleRange.RowHeight = 30;
 
-                // Дата формирования
                 worksheet.Cells[2, 1] = $"Дата формирования: {DateTime.Now.ToString("dd.MM.yyyy HH:mm")}";
                 worksheet.Range["A2", "I2"].Merge();
                 worksheet.Range["A2"].Font.Italic = true;
 
-                // ИТОГОВАЯ СТАТИСТИКА
                 worksheet.Cells[4, 1] = "ИТОГОВАЯ СТАТИСТИКА:";
                 worksheet.Range["A4"].Font.Bold = true;
                 worksheet.Range["A4"].Font.Size = 12;
@@ -463,7 +480,6 @@ namespace WindowsFormsApp1
                 worksheet.Cells[7, 2] = totalSum / reportData.Rows.Count;
                 worksheet.Range["B7"].NumberFormat = "#,##0.00 ₽";
 
-                // ЗАГОЛОВКИ ТАБЛИЦЫ
                 string[] headers = { "№", "Клиент", "Телефон", "Статус", "Менеджер", "Дата заказа", "Дата выполнения", "Сумма, ₽", "Состав заказа" };
                 for (int i = 0; i < headers.Length; i++)
                 {
@@ -475,13 +491,12 @@ namespace WindowsFormsApp1
                     headerCell.Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
                 }
 
-                // ДАННЫЕ ТАБЛИЦЫ
                 int rowIndex = 10;
                 foreach (DataRow row in reportData.Rows)
                 {
                     worksheet.Cells[rowIndex, 1] = rowIndex - 9;
                     worksheet.Cells[rowIndex, 2] = row["Клиент"].ToString();
-                    worksheet.Cells[rowIndex, 3] = row["Телефон"].ToString(); // Полный номер для отчета
+                    worksheet.Cells[rowIndex, 3] = row["Телефон"].ToString();
                     worksheet.Cells[rowIndex, 4] = row["Статус"].ToString();
                     worksheet.Cells[rowIndex, 5] = row["Пользователь"].ToString();
                     worksheet.Cells[rowIndex, 6] = row["Дата заказа"].ToString();
@@ -489,9 +504,9 @@ namespace WindowsFormsApp1
 
                     Microsoft.Office.Interop.Excel.Range sumCell = worksheet.Cells[rowIndex, 8];
                     sumCell.Value = Convert.ToDecimal(row["Сумма"]);
+                    sumCell.NumberFormat = "#,##0.00 ₽";
                     sumCell.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignRight;
 
-                    // СОСТАВ
                     if (row["Состав"] != DBNull.Value)
                     {
                         string json = row["Состав"].ToString();
@@ -499,7 +514,6 @@ namespace WindowsFormsApp1
                         worksheet.Cells[rowIndex, 9] = composition;
                     }
 
-                    // Чередование цвета строк
                     if ((rowIndex - 9) % 2 == 0)
                     {
                         Microsoft.Office.Interop.Excel.Range rowRange = worksheet.Range[
@@ -516,9 +530,9 @@ namespace WindowsFormsApp1
                     rowIndex++;
                 }
 
-                // ИТОГОВАЯ СТРОКА
                 worksheet.Cells[rowIndex, 8] = totalSum;
                 worksheet.Range[worksheet.Cells[rowIndex, 8], worksheet.Cells[rowIndex, 8]].Font.Bold = true;
+                worksheet.Range[worksheet.Cells[rowIndex, 8], worksheet.Cells[rowIndex, 8]].NumberFormat = "#,##0.00 ₽";
                 worksheet.Range[worksheet.Cells[rowIndex, 8], worksheet.Cells[rowIndex, 8]].Interior.Color = Color.LightYellow;
 
                 Microsoft.Office.Interop.Excel.Range dataRange = worksheet.Range["A9", $"I{rowIndex}"];
@@ -538,7 +552,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ==========
         private int GetSelectedOrderId()
         {
             if (dataGridView1.SelectedRows.Count == 0) return 0;
@@ -616,7 +629,6 @@ namespace WindowsFormsApp1
             int orderId = GetSelectedOrderId();
             if (orderId == 0) return;
 
-            // Показываем подробную информацию о заказе
             DataGridViewRow row = dataGridView1.SelectedRows[0];
             string composition = row.Cells["Состав"].Value?.ToString() ?? "";
 
@@ -628,8 +640,44 @@ namespace WindowsFormsApp1
         {
             txtSearch.Text = "";
             cmbStatus.SelectedIndex = 0;
-            txtPriceFilter.Text = "";
-            if (ordersTable != null) ordersTable.DefaultView.RowFilter = "";
+            cmbPriceSort.SelectedIndex = 0;
+
+            if (ordersTable != null)
+            {
+                try
+                {
+                    ordersTable.DefaultView.RowFilter = "";
+                    if (ordersTable.Columns.Contains("Дата_заказа_сортировка"))
+                        ordersTable.DefaultView.Sort = "[Дата_заказа_сортировка] DESC";
+                    else
+                        ordersTable.DefaultView.Sort = "";
+
+                    dataGridView1.DataSource = ordersTable.DefaultView;
+                    FillCompositionColumn();
+                }
+                catch
+                {
+                    dataGridView1.DataSource = ordersTable;
+                    FillCompositionColumn();
+                }
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string russianLetters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!russianLetters.Contains(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+                MessageBox.Show("Можно вводить только русские буквы", "Недопустимый символ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

@@ -2,12 +2,9 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 
@@ -21,13 +18,36 @@ namespace WindowsFormsApp1
         public FormOrdersSeller()
         {
             InitializeComponent();
+
+            // Подписываемся на события
+            cmbStatus.SelectedIndexChanged += cmbStatus_SelectedIndexChanged;
+            cmbPriceSort.SelectedIndexChanged += cmbPriceSort_SelectedIndexChanged;
+            txtSearch.TextChanged += txtSearch_TextChanged;
         }
 
         private void FormOrdersSeller_Load(object sender, EventArgs e)
         {
             LoadStatuses();
+            LoadPriceSortOptions();
             LoadOrders();
             InitializeDataGridView();
+
+            // Запрещаем сортировку по клику на заголовки колонок
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
+        // ========== ЗАГРУЗКА ВАРИАНТОВ СОРТИРОВКИ ==========
+        private void LoadPriceSortOptions()
+        {
+            cmbPriceSort.DropDownStyle = ComboBoxStyle.DropDownList; // Запрещаем ввод текста
+            cmbPriceSort.Items.Clear();
+            cmbPriceSort.Items.Add("Без сортировки");
+            cmbPriceSort.Items.Add("Сначала дешевые");
+            cmbPriceSort.Items.Add("Сначала дорогие");
+            cmbPriceSort.SelectedIndex = 0;
         }
 
         private void LoadStatuses()
@@ -47,6 +67,7 @@ namespace WindowsFormsApp1
                     allStatusesRow["name"] = "Все статусы";
                     dt.Rows.InsertAt(allStatusesRow, 0);
 
+                    cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList; // Запрещаем ввод текста
                     cmbStatus.DataSource = dt;
                     cmbStatus.DisplayMember = "name";
                     cmbStatus.ValueMember = "id";
@@ -66,7 +87,6 @@ namespace WindowsFormsApp1
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    // ДОБАВЛЯЕМ items_json В ЗАПРОС
                     string sql = @"SELECT 
                                 o.id AS 'ID',
                                 o.client_id AS 'ID клиента',
@@ -79,11 +99,12 @@ namespace WindowsFormsApp1
                                 DATE_FORMAT(o.order_date, '%d.%m.%Y %H:%i') AS 'Дата заказа',
                                 DATE_FORMAT(o.completion_date, '%d.%m.%Y') AS 'Дата выполнения',
                                 o.total_amount AS 'Сумма',
-                                o.total_amount AS total_amount_numeric,
-                                o.items_json AS 'СоставJSON',  -- ДОБАВЛЯЕМ JSON
+                                o.total_amount AS 'Сумма_число',
+                                o.items_json AS 'СоставJSON',
                                 o.client_id,
                                 o.status_id,
-                                o.user_id
+                                o.user_id,
+                                o.order_date AS 'Дата_заказа_сортировка'
                          FROM orders o
                          LEFT JOIN clients c ON o.client_id = c.id
                          LEFT JOIN order_statuses s ON o.status_id = s.id
@@ -98,8 +119,9 @@ namespace WindowsFormsApp1
 
                     // Скрываем технические поля
                     string[] hiddenColumns = { "ID", "client_id", "status_id", "user_id",
-                                               "total_amount_numeric", "ID клиента",
-                                               "ID статуса", "ID пользователя", "СоставJSON" };
+                                               "ID клиента", "ID статуса",
+                                               "ID пользователя", "СоставJSON",
+                                               "Сумма_число", "Дата_заказа_сортировка" };
 
                     foreach (string columnName in hiddenColumns)
                     {
@@ -124,7 +146,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ДОБАВЛЕНИЕ КОЛОНКИ СОСТАВА ==========
+        // ========== ДОБАВЛЕНИЕ КОЛОНКИ СОСТАВА ==========
         private void AddCompositionColumn()
         {
             if (!dataGridView1.Columns.Contains("Состав"))
@@ -135,11 +157,12 @@ namespace WindowsFormsApp1
                 compColumn.Width = 250;
                 compColumn.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 compColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.TopLeft;
+                compColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
                 dataGridView1.Columns.Add(compColumn);
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ЗАПОЛНЕНИЕ СОСТАВА ==========
+        // ========== ЗАПОЛНЕНИЕ СОСТАВА ==========
         private void FillCompositionColumn()
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -155,18 +178,16 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    // Если JSON нет, пробуем получить из order_items
                     int orderId = Convert.ToInt32(row.Cells["ID"].Value);
                     string composition = GetCompositionFromOrderItems(orderId);
                     row.Cells["Состав"].Value = composition;
                 }
             }
 
-            // Автоматически подгоняем высоту строк под содержимое
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
-        // ========== НОВЫЙ МЕТОД: ФОРМАТИРОВАНИЕ JSON В ТЕКСТ ==========
+        // ========== ФОРМАТИРОВАНИЕ JSON В ТЕКСТ ==========
         private string FormatCompositionFromJson(string json)
         {
             try
@@ -180,11 +201,11 @@ namespace WindowsFormsApp1
             }
             catch
             {
-                return json; // Если не удалось распарсить, показываем как есть
+                return json;
             }
         }
 
-        // ========== НОВЫЙ МЕТОД: ПОЛУЧЕНИЕ СОСТАВА ИЗ order_items ==========
+        // ========== ПОЛУЧЕНИЕ СОСТАВА ИЗ order_items ==========
         private string GetCompositionFromOrderItems(int orderId)
         {
             try
@@ -281,38 +302,57 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = false;
         }
 
-        // ========== ФИЛЬТРАЦИЯ ==========
+        // ========== ФИЛЬТРАЦИЯ И СОРТИРОВКА ==========
         private void ApplyFilters()
         {
             if (ordersTable == null) return;
 
-            string filter = "";
-
-            if (!string.IsNullOrWhiteSpace(txtSearch.Text))
-                filter += $"[Клиент] LIKE '%{txtSearch.Text}%'";
-
-            if (cmbStatus.SelectedIndex > 0)
+            try
             {
-                if (!string.IsNullOrEmpty(filter)) filter += " AND ";
-                filter += $"[Статус] = '{cmbStatus.Text}'";
-            }
+                DataView dv = ordersTable.DefaultView;
+                string filter = "";
 
-            if (!string.IsNullOrWhiteSpace(txtPriceFilter.Text))
+                if (!string.IsNullOrWhiteSpace(txtSearch.Text))
+                    filter += $"[Клиент] LIKE '%{txtSearch.Text}%'";
+
+                if (cmbStatus.SelectedIndex > 0)
+                {
+                    if (!string.IsNullOrEmpty(filter)) filter += " AND ";
+                    filter += $"[Статус] = '{cmbStatus.Text}'";
+                }
+
+                dv.RowFilter = filter;
+
+                // Сортировка по цене
+                if (cmbPriceSort.SelectedIndex == 1) // Сначала дешевые
+                {
+                    if (ordersTable.Columns.Contains("Сумма_число"))
+                        dv.Sort = "[Сумма_число] ASC";
+                }
+                else if (cmbPriceSort.SelectedIndex == 2) // Сначала дорогие
+                {
+                    if (ordersTable.Columns.Contains("Сумма_число"))
+                        dv.Sort = "[Сумма_число] DESC";
+                }
+                else // Без сортировки
+                {
+                    if (ordersTable.Columns.Contains("Дата_заказа_сортировка"))
+                        dv.Sort = "[Дата_заказа_сортировка] DESC";
+                }
+
+                dataGridView1.DataSource = dv;
+                FillCompositionColumn();
+            }
+            catch (Exception ex)
             {
-                if (!string.IsNullOrEmpty(filter)) filter += " AND ";
-                if (decimal.TryParse(txtPriceFilter.Text, out decimal amount))
-                    filter += $"[total_amount_numeric] >= {amount}";
+                dataGridView1.DataSource = ordersTable;
+                FillCompositionColumn();
             }
-
-            ordersTable.DefaultView.RowFilter = filter;
-
-            // После фильтрации нужно перезаполнить состав
-            FillCompositionColumn();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e) => ApplyFilters();
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e) => ApplyFilters();
-        private void txtPriceFilter_TextChanged(object sender, EventArgs e) => ApplyFilters();
+        private void cmbPriceSort_SelectedIndexChanged(object sender, EventArgs e) => ApplyFilters();
 
         // ========== МЕТОД ДЛЯ ПОЛУЧЕНИЯ ДАННЫХ ОТЧЕТА ==========
         private DataTable GetReportData()
@@ -354,8 +394,6 @@ namespace WindowsFormsApp1
             return reportTable;
         }
 
-
-
         // ========== ОСТАЛЬНЫЕ МЕТОДЫ ==========
         private int GetSelectedOrderId()
         {
@@ -366,22 +404,11 @@ namespace WindowsFormsApp1
             return 0;
         }
 
-
-
-
-
-
-
-
-
-
-
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtSearch.Text = "";
             cmbStatus.SelectedIndex = 0;
-            txtPriceFilter.Text = "";
+            cmbPriceSort.SelectedIndex = 0;
 
             // Полностью перезагружаем данные из БД
             LoadOrders();
@@ -410,7 +437,6 @@ namespace WindowsFormsApp1
             DateTime.TryParse(row.Cells["Дата выполнения"].Value?.ToString(), out completionDate);
             decimal totalAmount = Convert.ToDecimal(row.Cells["Сумма"].Value);
 
-            // Получаем состав заказа из JSON
             string json = row.Cells["СоставJSON"].Value?.ToString();
             List<OrderItem> items = null;
             if (!string.IsNullOrEmpty(json))
@@ -422,7 +448,6 @@ namespace WindowsFormsApp1
                 catch { }
             }
 
-            // Если JSON не удалось распарсить, пробуем получить из order_items
             if (items == null || items.Count == 0)
             {
                 items = GetOrderItemsFromDb(orderId);
@@ -435,7 +460,6 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            // Преобразуем OrderItem в CartItem для метода печати (или адаптируем метод)
             var cartItems = items.Select(i => new CartItem
             {
                 ProductId = i.ProductId,
@@ -447,7 +471,6 @@ namespace WindowsFormsApp1
             PrintReceiptInWord(orderId, clientName, clientPhone, completionDate, cartItems, totalAmount);
         }
 
-        // ========== Метод печати чека в Word (скопирован из FormOrderCreation) ==========
         private void PrintReceiptInWord(int orderId, string clientName, string clientPhone,
             DateTime completionDate, List<CartItem> items, decimal total)
         {
@@ -460,7 +483,6 @@ namespace WindowsFormsApp1
                 Word.Document doc = wordApp.Documents.Add();
                 Word.Paragraph paragraph;
 
-                // Заголовок
                 paragraph = doc.Content.Paragraphs.Add();
                 paragraph.Range.Text = $"ЧЕК №{orderId}";
                 paragraph.Range.Font.Bold = 1;
@@ -468,7 +490,6 @@ namespace WindowsFormsApp1
                 paragraph.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter;
                 paragraph.Range.InsertParagraphAfter();
 
-                // Информация о заказе
                 paragraph = doc.Content.Paragraphs.Add();
                 paragraph.Range.Text = $"Дата заказа: {DateTime.Now:dd.MM.yyyy HH:mm}";
                 paragraph.Range.Font.Size = 12;
@@ -492,7 +513,6 @@ namespace WindowsFormsApp1
                 paragraph = doc.Content.Paragraphs.Add();
                 paragraph.Range.InsertParagraphAfter();
 
-                // Таблица товаров
                 Word.Table table = doc.Tables.Add(paragraph.Range, items.Count + 1, 5);
                 table.Borders.Enable = 1;
                 table.Range.Font.Size = 11;
@@ -527,7 +547,6 @@ namespace WindowsFormsApp1
                     counter++;
                 }
 
-                // Итог
                 paragraph = doc.Content.Paragraphs.Add();
                 paragraph.Range.Text = $"ИТОГО: {total:F2} ₽";
                 paragraph.Range.Font.Bold = 1;
@@ -535,7 +554,6 @@ namespace WindowsFormsApp1
                 paragraph.Range.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphRight;
                 paragraph.Range.InsertParagraphAfter();
 
-                // Освобождение ресурсов (Word остаётся открытым)
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(table);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(paragraph);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(doc);
@@ -548,7 +566,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        // ========== Вспомогательный метод для получения состава заказа из БД (если JSON отсутствует) ==========
         private List<OrderItem> GetOrderItemsFromDb(int orderId)
         {
             var items = new List<OrderItem>();
@@ -588,9 +605,6 @@ namespace WindowsFormsApp1
             return items;
         }
 
-        // ========== Классы для данных ==========
-
-
         public class CartItem
         {
             public int ProductId { get; set; }
@@ -598,6 +612,23 @@ namespace WindowsFormsApp1
             public decimal Price { get; set; }
             public int Quantity { get; set; }
             public decimal TotalPrice => Price * Quantity;
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string russianLetters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+
+            if (char.IsControl(e.KeyChar))
+            {
+                return;
+            }
+
+            if (!russianLetters.Contains(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+                MessageBox.Show("Можно вводить только русские буквы", "Недопустимый символ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

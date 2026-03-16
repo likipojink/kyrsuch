@@ -11,13 +11,8 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using WindowsFormsApp1;
 
-
 namespace WindowsFormsApp1
 {
-
-
-
-
     public partial class A : Form
     {
         private string connectionString = DatabaseConfig.ConnectionString;
@@ -30,6 +25,21 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Login(txtLogin.Text, txtPassword.Text);
+        }
+
+        // Метод для хеширования пароля в SHA256
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
 
         private void Login(string login, string password)
@@ -47,8 +57,11 @@ namespace WindowsFormsApp1
                 {
                     connection.Open();
 
-                    // Получаем пользователя и название его роли
-                    string query = @"SELECT u.id, u.full_name, u.role_id, u.password_hash, r.name as role_name
+                    // Хешируем введенный пароль
+                    string hashedPassword = HashPassword(password);
+
+                    // Получаем пользователя и название его роли (сравниваем с хешем)
+                    string query = @"SELECT u.id, u.full_name, u.role_id, r.name as role_name
                                    FROM users u 
                                    INNER JOIN roles r ON u.role_id = r.id
                                    WHERE u.login = @Login AND u.password_hash = @Password";
@@ -56,7 +69,7 @@ namespace WindowsFormsApp1
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Login", login);
-                        command.Parameters.AddWithValue("@Password", password);
+                        command.Parameters.AddWithValue("@Password", hashedPassword);
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
@@ -145,8 +158,7 @@ namespace WindowsFormsApp1
 
         private void txtLogin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-            
+            // можно оставить пустым или добавить логику
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

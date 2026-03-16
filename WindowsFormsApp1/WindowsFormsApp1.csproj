@@ -199,6 +199,12 @@
     <EmbeddedResource Include="FormOrdersSeller.resx">
       <DependentUpon>FormOrdersSeller.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderStatus.resx">
+      <DependentUpon>FormOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRole.resx">
+      <DependentUpon>FormRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>

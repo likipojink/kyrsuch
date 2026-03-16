@@ -35,6 +35,7 @@ namespace FlowerShopApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrderCreation));
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -281,6 +282,7 @@ namespace FlowerShopApp
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrderCreation";
             this.Text = "FormOrderCreation";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

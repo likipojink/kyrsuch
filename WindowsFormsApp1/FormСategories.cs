@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         public FormСategories()
         {
             InitializeComponent1();
+            this.BackColor = Color.Thistle;
             LoadCategories();
         }
 

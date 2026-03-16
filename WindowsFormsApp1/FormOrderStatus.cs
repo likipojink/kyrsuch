@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         public FormOrderStatus()
         {
             InitializeComponent1();
+            this.BackColor = Color.Thistle;
             LoadStatuses();
         }
 
@@ -486,7 +487,7 @@ namespace WindowsFormsApp1
                 return true; // Если ошибка - лучше не удалять
             }
         }
-
+        
         private void ClearInput()
         {
             txtStatusName.Clear();

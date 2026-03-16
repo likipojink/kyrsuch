@@ -1,13 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -16,15 +11,32 @@ namespace WindowsFormsApp1
     {
         private string connectionString = DatabaseConfig.ConnectionString;
         private DataTable productsTable;
+        private DataTable fullDataTable; // полные данные без пагинации
+        private DataView currentDataView; // текущее представление с фильтрами
+
+        // Поля для пагинации
+        private int currentPage = 1;
+        private int pageSize = 25;
+        private int totalRecords = 0;
+        private int totalPages = 0;
 
         public ProductSeller()
         {
             InitializeComponent();
 
+            // Настройка пагинации
+            cmbPageSize.Items.AddRange(new object[] { 10, 25, 50, 100 });
+            cmbPageSize.SelectedIndex = 1; // 25 по умолчанию
+            cmbPageSize.SelectedIndexChanged += cmbPageSize_SelectedIndexChanged;
+
+            // Настройка событий для кнопок пагинации
+            btnPrevPage.Click += btnPrevPage_Click;
+            btnNextPage.Click += btnNextPage_Click;
+
             // Настройка событий
-            txtSearch.TextChanged += textBox1_TextChanged;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged;
-            comboBox2.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
 
             // Настройка внешнего вида
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 220, 240);
@@ -38,7 +50,7 @@ namespace WindowsFormsApp1
         {
             LoadSortOptions();
             LoadCategories();
-            LoadProducts();
+            LoadAllProducts(); // Загружаем все данные
         }
 
         // ----------------------------------------------------------
@@ -87,9 +99,9 @@ namespace WindowsFormsApp1
         }
 
         // ----------------------------------------------------------
-        // ГЛАВНЫЙ МЕТОД - ЗАГРУЗКА ТОВАРОВ
+        // ЗАГРУЗКА ВСЕХ ТОВАРОВ (БЕЗ ПАГИНАЦИИ)
         // ----------------------------------------------------------
-        private void LoadProducts()
+        private void LoadAllProducts()
         {
             try
             {
@@ -110,24 +122,120 @@ namespace WindowsFormsApp1
                      ORDER BY p.name";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    fullDataTable = new DataTable();
+                    da.Fill(fullDataTable);
 
-                    productsTable = dt;
+                    // Создаем DataView для фильтрации
+                    currentDataView = new DataView(fullDataTable);
 
-                    // СНАЧАЛА привязываем данные
-                    dataGridView1.DataSource = productsTable;
+                    // Получаем общее количество записей
+                    totalRecords = fullDataTable.Rows.Count;
 
-                    // ПОТОМ настраиваем внешний вид
-                    SetupDataGridView();
+                    // Рассчитываем общее количество страниц
+                    CalculateTotalPages();
 
-                    // ЗАГРУЗКА ФОТОГРАФИЙ
-                    LoadImagesToGrid();
+                    // Применяем пагинацию
+                    ApplyPagination();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка загрузки товаров: " + ex.Message);
+            }
+        }
+
+        // ----------------------------------------------------------
+        // РАСЧЕТ КОЛИЧЕСТВА СТРАНИЦ
+        // ----------------------------------------------------------
+        private void CalculateTotalPages()
+        {
+            if (pageSize <= 0) pageSize = 25;
+            if (totalRecords == 0)
+            {
+                totalPages = 1;
+            }
+            else
+            {
+                totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+            }
+
+            // Проверяем, что текущая страница не выходит за пределы
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            UpdatePaginationControls();
+        }
+
+        // ----------------------------------------------------------
+        // ПРИМЕНЕНИЕ ПАГИНАЦИИ
+        // ----------------------------------------------------------
+        private void ApplyPagination()
+        {
+            if (currentDataView == null) return;
+
+            // Получаем отфильтрованные данные
+            DataTable filteredTable = currentDataView.ToTable();
+
+            // Обновляем totalRecords на случай, если изменилось количество
+            totalRecords = filteredTable.Rows.Count;
+            CalculateTotalPages();
+
+            // Создаем новую таблицу для текущей страницы
+            productsTable = filteredTable.Clone();
+
+            int startIndex = (currentPage - 1) * pageSize;
+            int endIndex = Math.Min(startIndex + pageSize, filteredTable.Rows.Count);
+
+            for (int i = startIndex; i < endIndex; i++)
+            {
+                productsTable.ImportRow(filteredTable.Rows[i]);
+            }
+
+            // СНАЧАЛА привязываем данные
+            dataGridView1.DataSource = productsTable;
+
+            // ПОТОМ настраиваем внешний вид
+            SetupDataGridView();
+
+            // ЗАГРУЗКА ФОТОГРАФИЙ
+            LoadImagesToGrid();
+        }
+
+        // ----------------------------------------------------------
+        // ОБНОВЛЕНИЕ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ ПАГИНАЦИЕЙ
+        // ----------------------------------------------------------
+        private void UpdatePaginationControls()
+        {
+            lblPageInfo.Text = $"Страница {currentPage} из {totalPages}";
+            btnPrevPage.Enabled = currentPage > 1;
+            btnNextPage.Enabled = currentPage < totalPages;
+        }
+
+        // ----------------------------------------------------------
+        // ОБРАБОТЧИКИ ПАГИНАЦИИ
+        // ----------------------------------------------------------
+        private void cmbPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pageSize = Convert.ToInt32(cmbPageSize.SelectedItem);
+            currentPage = 1;
+            ApplyPagination(); // ApplyPagination сам вызовет CalculateTotalPages
+        }
+
+        private void btnPrevPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                ApplyPagination();
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                ApplyPagination();
             }
         }
 
@@ -211,7 +319,7 @@ namespace WindowsFormsApp1
                 if (row.IsNewRow) continue;
 
                 // Получаем байты изображения из скрытой колонки
-                if (productsTable.Columns.Contains("Фотография"))
+                if (productsTable != null && productsTable.Columns.Contains("Фотография"))
                 {
                     DataRowView rowView = row.DataBoundItem as DataRowView;
                     if (rowView != null)
@@ -284,9 +392,11 @@ namespace WindowsFormsApp1
         // ----------------------------------------------------------
         private void ApplyFilters()
         {
-            if (productsTable == null) return;
+            if (fullDataTable == null) return;
 
-            DataView dv = productsTable.DefaultView;
+            // Обновляем DataView
+            currentDataView = new DataView(fullDataTable);
+
             string filter = "";
 
             // Фильтр по названию
@@ -303,30 +413,34 @@ namespace WindowsFormsApp1
             }
 
             // Применяем фильтр
-            dv.RowFilter = filter;
+            if (!string.IsNullOrEmpty(filter))
+                currentDataView.RowFilter = filter;
 
             // Применяем сортировку
             switch (comboBox2.SelectedIndex)
             {
                 case 1: // По возрастанию цены
-                    dv.Sort = "[Цена] ASC";
+                    currentDataView.Sort = "[Цена] ASC";
                     break;
                 case 2: // По убыванию цены
-                    dv.Sort = "[Цена] DESC";
+                    currentDataView.Sort = "[Цена] DESC";
                     break;
                 default:
-                    dv.Sort = "";
+                    currentDataView.Sort = "";
                     break;
             }
 
-            dataGridView1.DataSource = dv;
-            LoadImagesToGrid();
+            // Сбрасываем на первую страницу
+            currentPage = 1;
+
+            // Применяем пагинацию
+            ApplyPagination();
         }
 
         // ----------------------------------------------------------
         // ОБРАБОТЧИКИ СОБЫТИЙ
         // ----------------------------------------------------------
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             ApplyFilters();
         }
@@ -336,36 +450,9 @@ namespace WindowsFormsApp1
             ApplyFilters();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             ApplyFilters();
-        }
-
-        // ----------------------------------------------------------
-        // ПОЛУЧЕНИЕ ID КАТЕГОРИИ ПО НАЗВАНИЮ
-        // ----------------------------------------------------------
-        private int GetCategoryIdByName(string categoryName)
-        {
-            if (string.IsNullOrEmpty(categoryName)) return 0;
-
-            try
-            {
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string sql = "SELECT id FROM categories WHERE name = @name";
-                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@name", categoryName);
-                        object result = cmd.ExecuteScalar();
-                        return result != null ? Convert.ToInt32(result) : 0;
-                    }
-                }
-            }
-            catch
-            {
-                return 0;
-            }
         }
 
         // ----------------------------------------------------------
@@ -376,20 +463,42 @@ namespace WindowsFormsApp1
             txtSearch.Text = "";
             cmbCategory.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
-            ApplyFilters();
+
+            // Сбрасываем DataView
+            if (fullDataTable != null)
+            {
+                currentDataView = new DataView(fullDataTable);
+                totalRecords = fullDataTable.Rows.Count;
+                currentPage = 1;
+                CalculateTotalPages();
+                ApplyPagination();
+            }
         }
 
         // ----------------------------------------------------------
         // НАЗАД
         // ----------------------------------------------------------
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            this.Close();
+            // Разрешаем: русские буквы, пробел, Backspace, Delete
+            string russianLetters = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+
+            if (char.IsControl(e.KeyChar)) // Разрешаем Backspace, Delete и т.д.
+            {
+                return;
+            }
+
+            if (!russianLetters.Contains(e.KeyChar.ToString()))
+            {
+                e.Handled = true; // Блокируем ввод
+                MessageBox.Show("Можно вводить только русские буквы", "Недопустимый символ",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

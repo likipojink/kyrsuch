@@ -105,7 +105,7 @@
             // 
             this.btnSettings.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSettings.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSettings.Location = new System.Drawing.Point(351, 9);
+            this.btnSettings.Location = new System.Drawing.Point(339, 12);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(139, 44);
             this.btnSettings.TabIndex = 6;
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(502, 381);
+            this.ClientSize = new System.Drawing.Size(490, 381);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
@@ -126,6 +126,7 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "A";

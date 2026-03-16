@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -41,6 +42,10 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnNextPage = new System.Windows.Forms.Button();
+            this.btnPrevPage = new System.Windows.Forms.Button();
+            this.cmbPageSize = new System.Windows.Forms.ComboBox();
+            this.lblPageInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,12 +182,60 @@ namespace WindowsFormsApp1
             this.comboBox2.Size = new System.Drawing.Size(177, 32);
             this.comboBox2.TabIndex = 19;
             // 
+            // btnNextPage
+            // 
+            this.btnNextPage.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnNextPage.Location = new System.Drawing.Point(707, 526);
+            this.btnNextPage.Name = "btnNextPage";
+            this.btnNextPage.Size = new System.Drawing.Size(41, 38);
+            this.btnNextPage.TabIndex = 20;
+            this.btnNextPage.Text = ">";
+            this.btnNextPage.UseVisualStyleBackColor = false;
+            this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
+            // 
+            // btnPrevPage
+            // 
+            this.btnPrevPage.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnPrevPage.Location = new System.Drawing.Point(627, 526);
+            this.btnPrevPage.Name = "btnPrevPage";
+            this.btnPrevPage.Size = new System.Drawing.Size(41, 38);
+            this.btnPrevPage.TabIndex = 21;
+            this.btnPrevPage.Text = "<";
+            this.btnPrevPage.UseVisualStyleBackColor = false;
+            this.btnPrevPage.Click += new System.EventHandler(this.btnPrevPage_Click);
+            // 
+            // cmbPageSize
+            // 
+            this.cmbPageSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPageSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbPageSize.FormattingEnabled = true;
+            this.cmbPageSize.Location = new System.Drawing.Point(546, 528);
+            this.cmbPageSize.Name = "cmbPageSize";
+            this.cmbPageSize.Size = new System.Drawing.Size(65, 32);
+            this.cmbPageSize.TabIndex = 22;
+            this.cmbPageSize.SelectedIndexChanged += new System.EventHandler(this.cmbPageSize_SelectedIndexChanged_1);
+            // 
+            // lblPageInfo
+            // 
+            this.lblPageInfo.AutoSize = true;
+            this.lblPageInfo.BackColor = System.Drawing.Color.Thistle;
+            this.lblPageInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPageInfo.Location = new System.Drawing.Point(611, 496);
+            this.lblPageInfo.Name = "lblPageInfo";
+            this.lblPageInfo.Size = new System.Drawing.Size(153, 24);
+            this.lblPageInfo.TabIndex = 23;
+            this.lblPageInfo.Text = "Страница 1 из 1";
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(893, 576);
+            this.Controls.Add(this.lblPageInfo);
+            this.Controls.Add(this.cmbPageSize);
+            this.Controls.Add(this.btnPrevPage);
+            this.Controls.Add(this.btnNextPage);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
@@ -196,6 +249,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Product";
             this.Text = "Product";
             this.Load += new System.EventHandler(this.Product_Load);
@@ -219,5 +273,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnNextPage;
+        private System.Windows.Forms.Button btnPrevPage;
+        private System.Windows.Forms.ComboBox cmbPageSize;
+        private System.Windows.Forms.Label lblPageInfo;
     }
 }

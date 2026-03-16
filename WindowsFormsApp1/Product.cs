@@ -11,13 +11,29 @@ namespace WindowsFormsApp1
     {
         private string connectionString = DatabaseConfig.ConnectionString;
         private DataTable productsTable;
+        private DataTable fullDataTable; // полные данные без пагинации
+
+        // Поля для пагинации
+        private int currentPage = 1;
+        private int pageSize = 25;
+        private int totalRecords = 0;
+        private int totalPages = 0;
 
         public Product()
         {
             InitializeComponent();
 
+            // Настройка пагинации
+            cmbPageSize.Items.AddRange(new object[] { 10, 25, 50, 100 });
+            cmbPageSize.SelectedIndex = 1; // 25 по умолчанию
+            cmbPageSize.SelectedIndexChanged += cmbPageSize_SelectedIndexChanged;
+
+            btnPrevPage.Click += btnPrevPage_Click;
+            btnNextPage.Click += btnNextPage_Click;
+
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.MultiSelect = false; //
+            dataGridView1.MultiSelect = false;
+
             // Настройка событий
             txtSearch.TextChanged += textBox1_TextChanged;
             cmbCategory.SelectedIndexChanged += cmbCategory_SelectedIndexChanged;
@@ -35,7 +51,7 @@ namespace WindowsFormsApp1
         {
             LoadSortOptions();
             LoadCategories();
-            LoadProducts();
+            LoadAllProducts(); // Загружаем все данные
         }
 
         // ----------------------------------------------------------
@@ -65,7 +81,6 @@ namespace WindowsFormsApp1
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Добавляем "Все категории"
                     DataRow allRow = dt.NewRow();
                     allRow["id"] = 0;
                     allRow["name"] = "Все категории";
@@ -84,9 +99,9 @@ namespace WindowsFormsApp1
         }
 
         // ----------------------------------------------------------
-        // ГЛАВНЫЙ МЕТОД - ЗАГРУЗКА ТОВАРОВ С ФОТОГРАФИЯМИ ИЗ БАЗЫ
+        // ЗАГРУЗКА ВСЕХ ТОВАРОВ (БЕЗ ПАГИНАЦИИ)
         // ----------------------------------------------------------
-        private void LoadProducts()
+        private void LoadAllProducts()
         {
             try
             {
@@ -107,24 +122,105 @@ namespace WindowsFormsApp1
                              ORDER BY p.name";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    fullDataTable = new DataTable();
+                    da.Fill(fullDataTable);
 
-                    productsTable = dt;
+                    // Получаем общее количество записей
+                    totalRecords = fullDataTable.Rows.Count;
 
-                    // СНАЧАЛА привязываем данные
-                    dataGridView1.DataSource = productsTable;
+                    // Рассчитываем общее количество страниц
+                    CalculateTotalPages();
 
-                    // ПОТОМ настраиваем внешний вид
-                    SetupDataGridView();
-
-                    // ЗАГРУЗКА ФОТОГРАФИЙ В КОЛОНКУ
-                    LoadImagesToGrid();
+                    // Применяем пагинацию
+                    ApplyPagination();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка загрузки товаров: " + ex.Message);
+            }
+        }
+
+        // ----------------------------------------------------------
+        // РАСЧЕТ КОЛИЧЕСТВА СТРАНИЦ
+        // ----------------------------------------------------------
+        private void CalculateTotalPages()
+        {
+            if (pageSize <= 0) pageSize = 25;
+            totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+            if (totalPages == 0) totalPages = 1;
+
+            // Проверяем, что текущая страница не выходит за пределы
+            if (currentPage > totalPages) currentPage = totalPages;
+            if (currentPage < 1) currentPage = 1;
+
+            UpdatePaginationControls();
+        }
+
+        // ----------------------------------------------------------
+        // ПРИМЕНЕНИЕ ПАГИНАЦИИ
+        // ----------------------------------------------------------
+        private void ApplyPagination()
+        {
+            if (fullDataTable == null) return;
+
+            // Создаем новую таблицу для текущей страницы
+            productsTable = fullDataTable.Clone();
+
+            int startIndex = (currentPage - 1) * pageSize;
+            int endIndex = Math.Min(startIndex + pageSize, totalRecords);
+
+            for (int i = startIndex; i < endIndex; i++)
+            {
+                productsTable.ImportRow(fullDataTable.Rows[i]);
+            }
+
+            // СНАЧАЛА привязываем данные
+            dataGridView1.DataSource = productsTable;
+
+            // ПОТОМ настраиваем внешний вид
+            SetupDataGridView();
+
+            // ЗАГРУЗКА ФОТОГРАФИЙ
+            LoadImagesToGrid();
+        }
+
+        // ----------------------------------------------------------
+        // ОБНОВЛЕНИЕ ЭЛЕМЕНТОВ УПРАВЛЕНИЯ ПАГИНАЦИЕЙ
+        // ----------------------------------------------------------
+        private void UpdatePaginationControls()
+        {
+            lblPageInfo.Text = $"Страница {currentPage} из {totalPages}";
+            btnPrevPage.Enabled = currentPage > 1;
+            btnNextPage.Enabled = currentPage < totalPages;
+        }
+
+        // ----------------------------------------------------------
+        // ОБРАБОТЧИКИ ПАГИНАЦИИ
+        // ----------------------------------------------------------
+        private void cmbPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pageSize = Convert.ToInt32(cmbPageSize.SelectedItem);
+            currentPage = 1;
+            CalculateTotalPages();
+            ApplyPagination();
+        }
+
+        private void btnPrevPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1)
+            {
+                currentPage--;
+                ApplyPagination();
+            }
+        }
+
+        private void btnNextPage_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages)
+            {
+                currentPage++;
+                ApplyPagination();
             }
         }
 
@@ -287,9 +383,9 @@ namespace WindowsFormsApp1
         // ----------------------------------------------------------
         private void ApplyFilters()
         {
-            if (productsTable == null) return;
+            if (fullDataTable == null) return;
 
-            DataView dv = productsTable.DefaultView;
+            DataView dv = fullDataTable.DefaultView;
             string filter = "";
 
             // Фильтр по названию
@@ -318,14 +414,19 @@ namespace WindowsFormsApp1
                     dv.Sort = "[Цена] DESC";
                     break;
                 default:
-                    dv.Sort = "";
+                    dv.Sort = "[Название] ASC";
                     break;
             }
 
-            dataGridView1.DataSource = dv;
+            // Обновляем количество записей
+            totalRecords = dv.Count;
+            CalculateTotalPages();
 
-            // После применения фильтров перезагружаем изображения
-            LoadImagesToGrid();
+            // Сохраняем отфильтрованные данные
+            fullDataTable = dv.ToTable();
+
+            // Применяем пагинацию
+            ApplyPagination();
         }
 
         // ----------------------------------------------------------
@@ -333,16 +434,19 @@ namespace WindowsFormsApp1
         // ----------------------------------------------------------
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            currentPage = 1; // Сбрасываем на первую страницу при поиске
             ApplyFilters();
         }
 
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            currentPage = 1; // Сбрасываем на первую страницу при смене категории
             ApplyFilters();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            currentPage = 1; // Сбрасываем на первую страницу при смене сортировки
             ApplyFilters();
         }
 
@@ -354,6 +458,7 @@ namespace WindowsFormsApp1
             txtSearch.Text = "";
             cmbCategory.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
+            currentPage = 1;
             ApplyFilters();
         }
 
@@ -363,7 +468,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             FormAddProduct addForm = new FormAddProduct();
-            addForm.FormClosed += (s, args) => LoadProducts();
+            addForm.FormClosed += (s, args) => LoadAllProducts();
             addForm.ShowDialog();
         }
 
@@ -416,7 +521,7 @@ namespace WindowsFormsApp1
             editForm.FormClosed += (s, args) =>
             {
                 if (editForm.DialogResult == DialogResult.OK)
-                    LoadProducts();
+                    LoadAllProducts();
             };
 
             editForm.ShowDialog();
@@ -497,7 +602,7 @@ namespace WindowsFormsApp1
                             {
                                 MessageBox.Show("Товар успешно удален", "Успех",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                LoadProducts();
+                                LoadAllProducts();
                             }
                         }
                     }
@@ -516,6 +621,11 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbPageSize_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

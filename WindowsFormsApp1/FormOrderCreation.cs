@@ -29,7 +29,7 @@ namespace FlowerShopApp
 
             // Настройка валидации
             SetupValidation();
-
+            
             // Привязка событий к кнопкам
             button1.Click += (s, e) => AddToCart(); // "добавить товар в корзину"
             button2.Click += (s, e) => RemoveFromCart(); // "удалить товар из корзины"
@@ -193,6 +193,7 @@ namespace FlowerShopApp
 
         private void SetupCartDataGridView()
         {
+            dataGridView2.ReadOnly = true;
             // Настраиваем колонки для корзины
             dataGridView2.Columns.Clear();
 
@@ -266,6 +267,7 @@ namespace FlowerShopApp
                 var adapter = new MySqlDataAdapter(query, connection);
                 var dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                dataGridView1.ReadOnly = true;
 
                 allProducts.Clear();
                 dataGridView1.Rows.Clear();

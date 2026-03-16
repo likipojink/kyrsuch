@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrders));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -38,10 +39,10 @@ namespace WindowsFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPriceFilter = new System.Windows.Forms.TextBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnShowPhone = new System.Windows.Forms.Button();
+            this.cmbPriceSort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,6 +107,7 @@ namespace WindowsFormsApp1
             this.txtSearch.Size = new System.Drawing.Size(269, 29);
             this.txtSearch.TabIndex = 12;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // label2
             // 
@@ -140,16 +142,6 @@ namespace WindowsFormsApp1
             this.label3.TabIndex = 15;
             this.label3.Text = "Фильтрация по цене";
             // 
-            // txtPriceFilter
-            // 
-            this.txtPriceFilter.BackColor = System.Drawing.Color.Lavender;
-            this.txtPriceFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPriceFilter.Location = new System.Drawing.Point(592, 63);
-            this.txtPriceFilter.Name = "txtPriceFilter";
-            this.txtPriceFilter.Size = new System.Drawing.Size(151, 29);
-            this.txtPriceFilter.TabIndex = 16;
-            this.txtPriceFilter.TextChanged += new System.EventHandler(this.txtPriceFilter_TextChanged);
-            // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.SkyBlue;
@@ -183,15 +175,25 @@ namespace WindowsFormsApp1
             this.btnShowPhone.UseVisualStyleBackColor = false;
             this.btnShowPhone.Click += new System.EventHandler(this.btnShowPhone_Click);
             // 
+            // cmbPriceSort
+            // 
+            this.cmbPriceSort.BackColor = System.Drawing.Color.Lavender;
+            this.cmbPriceSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbPriceSort.FormattingEnabled = true;
+            this.cmbPriceSort.Location = new System.Drawing.Point(592, 60);
+            this.cmbPriceSort.Name = "cmbPriceSort";
+            this.cmbPriceSort.Size = new System.Drawing.Size(152, 32);
+            this.cmbPriceSort.TabIndex = 19;
+            // 
             // FormOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(932, 562);
+            this.Controls.Add(this.cmbPriceSort);
             this.Controls.Add(this.btnShowPhone);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.txtPriceFilter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.label2);
@@ -203,6 +205,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrders";
             this.Text = "FormOrders";
             this.Load += new System.EventHandler(this.FormOrders_Load);
@@ -223,9 +226,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPriceFilter;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnShowPhone;
+        private System.Windows.Forms.ComboBox cmbPriceSort;
     }
 }
